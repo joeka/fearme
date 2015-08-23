@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<resource_file type="SpriteFrames" subresource_count="15" version="1.1" version_name="Godot Engine v1.1.stable.d3b42e41b0">
+	<ext_resource path="res://assets/kid.png" type="Texture"></ext_resource>
+	<ext_resource path="res://assets/animations/kid_wakeup2.png" type="Texture"></ext_resource>
+	<ext_resource path="res://assets/animations/kid_wakeup3.png" type="Texture"></ext_resource>
+	<ext_resource path="res://assets/animations/kid_wakeup4.png" type="Texture"></ext_resource>
+	<ext_resource path="res://assets/animations/kid_wakeup5.png" type="Texture"></ext_resource>
+	<ext_resource path="res://assets/animations/kid_wakeup6.png" type="Texture"></ext_resource>
+	<ext_resource path="res://assets/animations/kid_wakeup5.png" type="Texture"></ext_resource>
+	<ext_resource path="res://assets/animations/kid_wakeup4.png" type="Texture"></ext_resource>
+	<ext_resource path="res://assets/animations/kid_wakeup3.png" type="Texture"></ext_resource>
+	<ext_resource path="res://assets/animations/kid_wakeup2.png" type="Texture"></ext_resource>
+	<ext_resource path="res://assets/animations/kid_alarm6.png" type="Texture"></ext_resource>
+	<ext_resource path="res://assets/animations/kid_alarm7.png" type="Texture"></ext_resource>
+	<ext_resource path="res://assets/animations/kid_alarm8.png" type="Texture"></ext_resource>
+	<ext_resource path="res://assets/animations/kid_alarm9.png" type="Texture"></ext_resource>
+	<main_resource>
+		<array name="frames" len="14" shared="false">
+			<resource  resource_type="Texture" path="res://assets/kid.png">  </resource>
+			<resource  resource_type="Texture" path="res://assets/animations/kid_wakeup2.png">  </resource>
+			<resource  resource_type="Texture" path="res://assets/animations/kid_wakeup3.png">  </resource>
+			<resource  resource_type="Texture" path="res://assets/animations/kid_wakeup4.png">  </resource>
+			<resource  resource_type="Texture" path="res://assets/animations/kid_wakeup5.png">  </resource>
+			<resource  resource_type="Texture" path="res://assets/animations/kid_wakeup6.png">  </resource>
+			<resource  resource_type="Texture" path="res://assets/animations/kid_wakeup5.png">  </resource>
+			<resource  resource_type="Texture" path="res://assets/animations/kid_wakeup4.png">  </resource>
+			<resource  resource_type="Texture" path="res://assets/animations/kid_wakeup3.png">  </resource>
+			<resource  resource_type="Texture" path="res://assets/animations/kid_wakeup2.png">  </resource>
+			<resource  resource_type="Texture" path="res://assets/animations/kid_alarm6.png">  </resource>
+			<resource  resource_type="Texture" path="res://assets/animations/kid_alarm7.png">  </resource>
+			<resource  resource_type="Texture" path="res://assets/animations/kid_alarm8.png">  </resource>
+			<resource  resource_type="Texture" path="res://assets/animations/kid_alarm9.png">  </resource>
+		</array>
+
+	</main_resource>
+</resource_file>
