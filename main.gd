@@ -39,7 +39,7 @@ func grid_to_pos( grid ):
 func reachable( grid ):
 	var cell = get_node("Objects").get_cell(grid.x, grid.y)
 	var current_grid = pos_to_grid(get_node("Player").get_pos())
-	if grid.x < 0 or grid.x > 5 or grid.y < 0 or grid.y > 10:
+	if grid.x < 0 or grid.x > 5 or grid.y < 1 or grid.y > 10:
 		return false
 	elif abs(grid.x - current_grid.x) > 1 or abs(grid.y - current_grid.y) > 1:
 		return false
