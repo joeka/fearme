@@ -1,7 +1,6 @@
 extends AnimatedSprite
 
 export(int) var notice_threshold = 400 # max distance you can be noticed
-export(int) var max_notice = 90 # existence confirmed -> loss
 export(float) var light_probability_factor = 0.5
 export(int) var notice_gain = 600
 export(int) var notice_loss = 3
@@ -23,9 +22,9 @@ func player_hiding():
 func turn_on_light( on ):
 	get_parent().get_node("Light").set_enabled( on )
 	light = on
+	
 
 func _next_turn():
-	print("\n - - - next turn - - - ")
 	var dist = get_pos().distance_to(get_parent().get_node("Player").get_pos())
 	var new_notice = notice
 	
@@ -46,16 +45,17 @@ func _next_turn():
 		queue_light = false
 		turn_on_light(true)
 	elif notice > light_threshold and randf() < light_probability_factor * new_notice * 0.01:
-		print( "lighty light: ", light_probability_factor * new_notice * 0.01)
 		queue_light = true
 	
+	print("\n - - - next turn - - - ")
 	print("notice: ", new_notice)
 	print("fear: ", fear)
 	print("distance: ", dist)
 	print("gain: ", new_notice - notice)
 	if queue_light:
-		print("light queued")
+		print("light queued (probability was ", light_probability_factor * new_notice * 0.01, ")")
 	print("player hiding: ", player_hiding())
 	
 	notice = new_notice
-
+	get_node("/root/Game/GUILayer/NoticeProgress").set_val(notice)
+	get_node("/root/Game/GUILayer/FearProgress").set_val(fear)
