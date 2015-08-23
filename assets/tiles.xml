@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" ?>
-<resource_file type="TileSet" subresource_count="11" version="1.1" version_name="Godot Engine v1.1.stable.d3b42e41b0">
+<resource_file type="TileSet" subresource_count="12" version="1.1" version_name="Godot Engine v1.1.stable.d3b42e41b0">
 	<ext_resource path="res://assets/tiles.png" type="Texture"></ext_resource>
 	<ext_resource path="res://assets/tiles.png" type="Texture"></ext_resource>
 	<ext_resource path="res://assets/tiles.png" type="Texture"></ext_resource>
@@ -10,6 +10,12 @@
 	<ext_resource path="res://assets/tiles.png" type="Texture"></ext_resource>
 	<ext_resource path="res://assets/tiles.png" type="Texture"></ext_resource>
 	<ext_resource path="res://assets/tiles.png" type="Texture"></ext_resource>
+	<resource type="OccluderPolygon2D" path="local://1">
+		<bool name="closed"> True </bool>
+		<int name="cull_mode"> 0 </int>
+		<vector2_array name="polygon" len="0"> 			 </vector2_array>
+
+	</resource>
 	<main_resource>
 		<string name="0/name"> "Carpet" </string>
 		<resource name="0/texture" resource_type="Texture" path="res://assets/tiles.png">  </resource>
@@ -79,7 +85,8 @@
 		<vector2 name="7/tex_offset"> 0, 0 </vector2>
 		<resource name="7/material"></resource>		<rect2 name="7/region"> 128, 384, 64, 64 </rect2>
 		<vector2 name="7/occluder_offset"> 32, 32 </vector2>
-		<resource name="7/occluder"></resource>		<vector2 name="7/navigation_offset"> 32, 32 </vector2>
+		<resource name="7/occluder" resource_type="OccluderPolygon2D" path="local://1">  </resource>
+		<vector2 name="7/navigation_offset"> 32, 32 </vector2>
 		<resource name="7/navigation"></resource>		<vector2 name="7/shape_offset"> 0, 0 </vector2>
 		<array name="7/shapes" len="0" shared="false">
 		</array>
