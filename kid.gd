@@ -17,9 +17,8 @@ var fear = 0
 var light = false
 var queue_light = false
 
-func player_hidden():
-	#check if player is hidden
-	return false
+func player_hiding():
+	return get_parent().get_node("Player").is_hiding()
 
 func turn_on_light( on ):
 	get_parent().get_node("Light").set_enabled( on )
@@ -30,7 +29,7 @@ func _next_turn():
 	var dist = get_pos().distance_to(get_parent().get_node("Player").get_pos())
 	var new_notice = notice
 	
-	if dist < notice_threshold and not player_hidden():
+	if dist < notice_threshold and not player_hiding():
 		if light:
 			new_notice = min( notice + notice_gain * light_multiplier / dist, 100 )
 		else:
@@ -56,6 +55,7 @@ func _next_turn():
 	print("gain: ", new_notice - notice)
 	if queue_light:
 		print("light queued")
+	print("player hiding: ", player_hiding())
 	
 	notice = new_notice
 

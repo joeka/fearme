@@ -9,8 +9,16 @@ var MOVE = 1
 var turned = false
 var action = -1
 
+var hiding = false 
+
 func _ready():
 	rotate( get_angle_to( get_parent().get_node("Kid").get_pos() ) + PI	)
+
+func is_hiding():
+	return hiding
+
+func set_hiding( b ):
+	hiding = b
 
 func turn_to ( pos ):
 	get_node("AnimatedSprite").play()
