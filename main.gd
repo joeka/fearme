@@ -5,10 +5,14 @@ func _init():
 	move_button = preload("res://assets/move_button.scn")
 
 func _ready():
-	set_process(true)
 	new_grid()
+	set_process_input(true)
+
+func _next_turn():
+	get_tree().call_group(0,"actors","_next_turn")
 
 func new_grid():
+	_next_turn()
 	var current_grid = pos_to_grid( get_node("Player").get_pos() )
 	for x in range(current_grid.x - 1, current_grid.x + 2):
 		for y in range(current_grid.y -1, current_grid.y +2):
@@ -47,3 +51,12 @@ func reachable( grid ):
 		return false
 	else:
 		return true
+
+func _input(event):
+	if event.is_action("screenshot") and event.is_pressed():
+		get_viewport().queue_screen_capture()
+		yield(get_tree(), "idle_frame")
+		yield(get_tree(), "idle_frame")
+		var filename = "screenshot" + str(OS.get_unix_time()) + ".png"
+		print( "Screenshot saved: " + filename )
+		get_viewport().get_screen_capture().save_png("user://" + filename)
