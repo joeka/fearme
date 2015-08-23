@@ -2,6 +2,10 @@ extends Node2D
 var move_button
 var hide_button
 
+var countdown_timer
+var countdown_label
+
+
 func _init():
 	move_button = preload("res://assets/move_button.scn")
 	hide_button = preload("res://assets/hide_button.scn")
@@ -9,6 +13,10 @@ func _init():
 func _ready():
 	new_grid()
 	set_process_input(true)
+	
+	countdown_timer = get_node("Countdown")
+	countdown_label = get_node("GUILayer/CountdownLabel")
+	set_process(true)
 
 func _next_turn():
 	get_tree().call_group(0,"actors","_next_turn")
@@ -70,3 +78,12 @@ func _input(event):
 		var filename = "screenshot" + str(OS.get_unix_time()) + ".png"
 		print( "Screenshot saved: " + filename )
 		get_viewport().get_screen_capture().save_png("user://" + filename)
+
+func _process(delta):
+	var time = countdown_timer.get_time_left()
+	var minutes = int(time / 60)
+	var seconds = int(time) % 60
+	countdown_label.set_text(str(minutes) + ":" + str(seconds))
+
+func _on_Countdown_timeout():
+	get_tree().change_scene("res://gameover.scn")
