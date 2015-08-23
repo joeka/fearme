@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="UTF-8" ?>
-<resource_file type="TileSet" subresource_count="10" version="1.1" version_name="Godot Engine v1.1.stable.d3b42e41b0">
+<resource_file type="TileSet" subresource_count="11" version="1.1" version_name="Godot Engine v1.1.stable.d3b42e41b0">
+	<ext_resource path="res://assets/tiles.png" type="Texture"></ext_resource>
 	<ext_resource path="res://assets/tiles.png" type="Texture"></ext_resource>
 	<ext_resource path="res://assets/tiles.png" type="Texture"></ext_resource>
 	<ext_resource path="res://assets/tiles.png" type="Texture"></ext_resource>
@@ -22,7 +23,7 @@
 		<string name="1/name"> "Wall" </string>
 		<resource name="1/texture" resource_type="Texture" path="res://assets/tiles.png">  </resource>
 		<vector2 name="1/tex_offset"> 0, 0 </vector2>
-		<resource name="1/material"></resource>		<rect2 name="1/region"> 64, -1, 64, 64 </rect2>
+		<resource name="1/material"></resource>		<rect2 name="1/region"> 128, 0, 64, 64 </rect2>
 		<vector2 name="1/occluder_offset"> 32, 32 </vector2>
 		<resource name="1/occluder"></resource>		<vector2 name="1/navigation_offset"> 32, 32 </vector2>
 		<resource name="1/navigation"></resource>		<vector2 name="1/shape_offset"> 0, 0 </vector2>
@@ -40,7 +41,7 @@
 		<string name="3/name"> "WallCorner" </string>
 		<resource name="3/texture" resource_type="Texture" path="res://assets/tiles.png">  </resource>
 		<vector2 name="3/tex_offset"> 0, 0 </vector2>
-		<resource name="3/material"></resource>		<rect2 name="3/region"> 64, 63, 64, 64 </rect2>
+		<resource name="3/material"></resource>		<rect2 name="3/region"> 128, 128, 64, 64 </rect2>
 		<vector2 name="3/occluder_offset"> 32, 32 </vector2>
 		<resource name="3/occluder"></resource>		<vector2 name="3/navigation_offset"> 32, 32 </vector2>
 		<resource name="3/navigation"></resource>		<vector2 name="3/shape_offset"> 0, 0 </vector2>
@@ -49,7 +50,7 @@
 		<string name="4/name"> "Bed1" </string>
 		<resource name="4/texture" resource_type="Texture" path="res://assets/tiles.png">  </resource>
 		<vector2 name="4/tex_offset"> 0, 0 </vector2>
-		<resource name="4/material"></resource>		<rect2 name="4/region"> 128, 0, 64, 64 </rect2>
+		<resource name="4/material"></resource>		<rect2 name="4/region"> 256, 0, 64, 64 </rect2>
 		<vector2 name="4/occluder_offset"> 32, 32 </vector2>
 		<resource name="4/occluder"></resource>		<vector2 name="4/navigation_offset"> 32, 32 </vector2>
 		<resource name="4/navigation"></resource>		<vector2 name="4/shape_offset"> 0, 0 </vector2>
@@ -58,7 +59,7 @@
 		<string name="5/name"> "Bed2" </string>
 		<resource name="5/texture" resource_type="Texture" path="res://assets/tiles.png">  </resource>
 		<vector2 name="5/tex_offset"> 0, 0 </vector2>
-		<resource name="5/material"></resource>		<rect2 name="5/region"> 128, 64, 64, 64 </rect2>
+		<resource name="5/material"></resource>		<rect2 name="5/region"> 256, 64, 64, 64 </rect2>
 		<vector2 name="5/occluder_offset"> 32, 32 </vector2>
 		<resource name="5/occluder"></resource>		<vector2 name="5/navigation_offset"> 32, 32 </vector2>
 		<resource name="5/navigation"></resource>		<vector2 name="5/shape_offset"> 0, 0 </vector2>
@@ -67,7 +68,7 @@
 		<string name="6/name"> "Doorframe" </string>
 		<resource name="6/texture" resource_type="Texture" path="res://assets/tiles.png">  </resource>
 		<vector2 name="6/tex_offset"> 0, 0 </vector2>
-		<resource name="6/material"></resource>		<rect2 name="6/region"> 64, 127, 64, 64 </rect2>
+		<resource name="6/material"></resource>		<rect2 name="6/region"> 128, 256, 64, 64 </rect2>
 		<vector2 name="6/occluder_offset"> 32, 32 </vector2>
 		<resource name="6/occluder"></resource>		<vector2 name="6/navigation_offset"> 32, 32 </vector2>
 		<resource name="6/navigation"></resource>		<vector2 name="6/shape_offset"> 0, 0 </vector2>
@@ -76,7 +77,7 @@
 		<string name="7/name"> "Door" </string>
 		<resource name="7/texture" resource_type="Texture" path="res://assets/tiles.png">  </resource>
 		<vector2 name="7/tex_offset"> 0, 0 </vector2>
-		<resource name="7/material"></resource>		<rect2 name="7/region"> 64, 192, 64, 64 </rect2>
+		<resource name="7/material"></resource>		<rect2 name="7/region"> 128, 384, 64, 64 </rect2>
 		<vector2 name="7/occluder_offset"> 32, 32 </vector2>
 		<resource name="7/occluder"></resource>		<vector2 name="7/navigation_offset"> 32, 32 </vector2>
 		<resource name="7/navigation"></resource>		<vector2 name="7/shape_offset"> 0, 0 </vector2>
@@ -90,6 +91,15 @@
 		<resource name="8/occluder"></resource>		<vector2 name="8/navigation_offset"> 32, 32 </vector2>
 		<resource name="8/navigation"></resource>		<vector2 name="8/shape_offset"> 0, 0 </vector2>
 		<array name="8/shapes" len="0" shared="false">
+		</array>
+		<string name="9/name"> "Nightstand" </string>
+		<resource name="9/texture" resource_type="Texture" path="res://assets/tiles.png">  </resource>
+		<vector2 name="9/tex_offset"> 0, 0 </vector2>
+		<resource name="9/material"></resource>		<rect2 name="9/region"> 384, 0, 64, 64 </rect2>
+		<vector2 name="9/occluder_offset"> 32, 32 </vector2>
+		<resource name="9/occluder"></resource>		<vector2 name="9/navigation_offset"> 32, 32 </vector2>
+		<resource name="9/navigation"></resource>		<vector2 name="9/shape_offset"> 0, 0 </vector2>
+		<array name="9/shapes" len="0" shared="false">
 		</array>
 
 	</main_resource>
