@@ -1,6 +1,7 @@
 extends Node2D
 var move_button
 var hide_button
+var wait_button
 
 var countdown_timer
 var countdown_label
@@ -9,6 +10,7 @@ var countdown_label
 func _init():
 	move_button = preload("res://assets/move_button.scn")
 	hide_button = preload("res://assets/hide_button.scn")
+	wait_button = preload("res://assets/wait_button.scn")
 
 func _ready():
 	new_grid()
@@ -27,7 +29,11 @@ func new_grid():
 	for x in range(current_grid.x - 1, current_grid.x + 2):
 		for y in range(current_grid.y -1, current_grid.y +2):
 			var grid = Vector2(x, y)
-			if reachable(grid) and grid != current_grid:
+			if grid == current_grid:
+				var wtbtn = wait_button.instance()
+				add_child(wtbtn)
+				wtbtn.set_global_pos(grid_to_pos(grid) - Vector2(32,32))
+			elif reachable(grid):
 				var cell = get_node("Objects").get_cell(x, y)
 				if cell == -1:
 					var mvbtn = move_button.instance()
@@ -52,6 +58,13 @@ func _on_move_button(pos):
 func _on_hide_button(pos):
 	_on_move_button(pos)
 	get_node("Player").set_hiding(true)
+
+func _on_wait_button():
+	disable_buttons()
+	get_node("WaitTimer").start()
+	
+func _on_WaitTimer_timeout():
+	new_grid()
 
 func pos_to_grid( pos ):
 	var x = floor(pos.x / 64)
