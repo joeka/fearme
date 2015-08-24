@@ -65,9 +65,9 @@ func _next_turn():
 		asleep = false
 	
 	if notice >= 100:
-		get_tree().change_scene("res://gameover.scn")
+		get_parent().gameover()
 	if fear >= 100:
-		get_tree().change_scene("res://won.scn")
+		get_parent().won()
 	
 	print("\n - - - next turn - - - ")
 	print("notice: ", new_notice)
