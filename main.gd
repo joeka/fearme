@@ -86,4 +86,11 @@ func _process(delta):
 	countdown_label.set_text(str(minutes) + ":" + str(seconds))
 
 func _on_Countdown_timeout():
+	disable_buttons()
+	get_node("EndTimer").start()
+	get_node("HallLight").set_enabled(true)
+	get_node("Door").hide()
+	get_node("Door/LightOccluder2D"). set_occluder_light_mask(0)
+
+func _on_EndTimer_timeout():
 	get_tree().change_scene("res://gameover.scn")
